@@ -1,0 +1,40 @@
+Replace Examples
+
+// table command
+struct tableA[] = {
+  /*[table]table_example*/
+  /* Name    , Age, Gender, Role              */
+    {"Mike"  , 45 , "M"   , "SWPM"            }, 
+    {"Steven", 23 , "M"   , "SW Engineer"     }, 
+    {"Jane"  , 28 , "F"   , "Quality Engineer"}
+  /*[table end]*/
+};
+
+// list command
+char name_list[][256] = {
+  /*[list]list_example
+  "%list_example%",*/
+  "Mike",
+  "Steven",
+  "Jane",
+  /*[list end]*/
+  ""
+}
+
+// pattern table command
+  /*[pattern table]pattern_table_example
+  0
+  AgeDictionary["%Name%"] = %Value%;*/
+  AgeDictionary["Mike"] = 45;
+  AgeDictionary["Steven"] = 23;
+  AgeDictionary["Jane"] = 28;
+  /*[pattern table end]*/
+
+  /*[pattern table]pattern_table_example
+  1
+  GenderDictionary["%Name%"] = "%Value%";*/
+  GenderDictionary["Mike"] = "M";
+  GenderDictionary["Steven"] = "M";
+  GenderDictionary["Jane"] = "F";
+  /*[pattern table end]*/
+  
